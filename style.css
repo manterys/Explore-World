@@ -434,7 +434,7 @@ li a:hover::after {
         display: none;
     }
     .menuActive .nav {
-        padding: 7rem 0 3rem;
+        /* padding: 7rem 0 3rem; */
         transform: translateY(0px);
         transition: var(--transition-0_3);
     }
