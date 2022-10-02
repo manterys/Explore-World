@@ -315,7 +315,7 @@ h3 {
 }
 .scrolled {
     background-color: var(--black);
-    height: 65px;
+    /* height: 65px; */
 }
 
 /* Logo */
@@ -327,9 +327,9 @@ h3 {
     height: 100%;
     transition: var(--transition-0_3);
 }
-.scrolled .logo img {
+/* .scrolled .logo img {
     width: 30px;
-}
+} */
 
 /* Navigation */
 li a {
