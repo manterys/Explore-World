@@ -74,7 +74,7 @@ const appStickyHeader = () => {
     const header = document.getElementById('header')
     const showcase = document.getElementById('showcase')
     let triggerHeight
-    if (!header && showcase) return
+    // if (!header && showcase) return
 
     triggerHeight = showcase.offsetHeight - 200;
 
@@ -86,7 +86,7 @@ const appStickyHeader = () => {
             header.classList.remove('scrolled')
         }
     })
-    console.log(triggerHeight)
+    // console.log(triggerHeight)
 }
 
 appStickyHeader()
