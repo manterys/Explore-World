@@ -162,13 +162,12 @@ appCounter()
 // Button Scroll Top
 const appTopBtn = () => {
     const pxShow = 600;
-    const btnTop = document.querySelector(".btn-go-top")
+    const btnTop = document.querySelector('.btn-go-top')
     const header = document.getElementById('header')
 
     if (!btnTop) return
     if (!header) return
 
-    // if (window.scrollY >= pxShow) btnTop.classList.add("visible")
     window.addEventListener('scroll', function() {
         if (window.scrollY >= pxShow) {
             if(!btnTop.classList.contains('visible')) btnTop.classList.add('visible')

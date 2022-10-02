@@ -299,6 +299,7 @@ h3 {
 
 /* Header */
 .header {
+    z-index: 5;
     position: fixed;
     margin: 0 auto;
     top: 0px;
@@ -308,15 +309,12 @@ h3 {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    transition: height .3s ease;
-    z-index: 5;
     padding-left: var(--space-0_5);
     padding-right: var(--space-0_5);
     transition: var(--transition-0_3);
 }
 .scrolled {
-    background-color: var(--black);
-    /* height: 65px; */
+    background-color: var(--gray-90);
 }
 
 /* Logo */
@@ -439,7 +437,7 @@ li a:hover::after {
         transform: translateY(0px);
         transition: var(--transition-0_3);
     }
-    .menuActive .social-icon {
+    .menuActive .nav .social-icon {
         display: flex;
         padding-left: 2.5rem;
     }
