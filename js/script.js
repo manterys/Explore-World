@@ -87,7 +87,7 @@ const appStickyHeader = () => {
     })
 }
 
-appStickyHeader()
+// appStickyHeader()
 
 
 // Menu Button
@@ -163,13 +163,19 @@ appCounter()
 const appTopBtn = () => {
     const pxShow = 600;
     const btnTop = document.querySelector(".btn-go-top")
+    const header = document.getElementById('header')
+
     if (!btnTop) return
-    if (window.scrollY >= pxShow) btnTop.classList.add("visible")
+    if (!header) return
+
+    // if (window.scrollY >= pxShow) btnTop.classList.add("visible")
     window.addEventListener('scroll', function() {
         if (window.scrollY >= pxShow) {
-            if(!btnTop.classList.contains('visible')) btnTop.classList.add("visible")
+            if(!btnTop.classList.contains('visible')) btnTop.classList.add('visible')
+            if(!header.classList.contains('scrolled')) header.classList.add('scrolled')
         } else {
-            btnTop.classList.remove("visible")
+            btnTop.classList.remove('visible')
+            header.classList.remove('scrolled')
         }
     });
 }

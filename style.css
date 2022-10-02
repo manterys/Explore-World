@@ -56,8 +56,7 @@ SETTINGS
     --fs-display-3: calc(6 * var(--fs-basic));
 
     /* Colors */
-    /* --primary-color: hsl(6, 63%, 35%); */
-    --primary-color: #E14F45;
+    --primary-color: hsl(4, 72%, 58%);
     --secondary-color: hsl(184, 69%, 32%);
     --black: hsl(0, 0%, 7%, 1);
     --gray-90: hsl(0, 0%, 10%);
@@ -71,10 +70,6 @@ SETTINGS
     --gray-10: hsl(0, 0%, 90%);
     --gray-5: hsl(0, 0%, 95%);
     --white: hsl(0, 0%, 100%, 1);
-
-    /* Btn Color */
-    /* --btn-color: var(--gray-70);
-    --btn-hover-color: var(--white); */
 
     /* Space */
     --multiplier: 1;
@@ -122,7 +117,6 @@ body {
     background-color: var(--black);
 }
 html {
-    background-color: var(--white);
     height: 100%;
 }
 ul, ol, li {
@@ -154,9 +148,6 @@ img {
 .primary-color {
     color: var(--primary-color);
 }
-.text-center {
-    text-align: center;
-}
 .border {
     height: 4px;
     width: 100px;
@@ -177,8 +168,8 @@ img {
     transition: var(--transition-0_3);
 }
 @media screen and (min-width: 760px) {
-    .btn:hover {
-        background-color: var(--primary-color);
+    .showcase .btn:hover {
+        letter-spacing: 6px;
     }
 }
 .btn-outline {
@@ -261,16 +252,6 @@ h3 {
     }
 }
 
-/* Media Typography */
-@media screen and (min-width: 500px) {
-
-}
-@media screen and (min-width: 720px) {
-    
-}
-@media screen and (min-width: 1000px) {
-    
-}
 
 /* Page */
 .page {
