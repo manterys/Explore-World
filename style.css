@@ -301,11 +301,11 @@ h3 {
 .header {
     z-index: 5;
     position: fixed;
-    margin: 0 auto;
-    top: -1px;
+    top: 0;
     left: 0;
     width: 100%;
     height: 65px;
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -326,9 +326,9 @@ h3 {
     height: 100%;
     transition: var(--transition-0_3);
 }
-/* .scrolled .logo img {
+.scrolled .logo img {
     width: 30px;
-} */
+}
 
 /* Navigation */
 li a {
