@@ -8,7 +8,6 @@
 // appStickyHeader()
 // appMenuBtn()
 // appCounter()
-// appModal()
 // appMoveTo()
 
 
@@ -33,7 +32,7 @@ const appLoader = () => {
     load()
 }
 
-appLoader()
+// appLoader()
 
 // Animation
 const appAnimation = () => {
@@ -86,7 +85,6 @@ const appStickyHeader = () => {
             header.classList.remove('scrolled')
         }
     })
-    // console.log(triggerHeight)
 }
 
 appStickyHeader()
@@ -145,8 +143,9 @@ const appCounter = () => {
     updateCounter()
 })
 
+// observer.unobserve(statistics)
+// observation is only one time
 observer.unobserve(statistics)
-// observer.unobserve(statistics) -dodaje, że obserwacja jest tylko raz!
 
 },
 {
@@ -158,38 +157,6 @@ CounterObserver.observe(statistics)
 }
 
 appCounter()
-
-
-// Modal
-const appModal = () => {
-    const modalBox = document.querySelector('.modal-box')
-    const closed = document.querySelector('.modal-box svg')
-    const img = document.querySelectorAll('.project')
-    const modal = document.querySelectorAll('.modal')
-    
-    img.forEach(img => img.addEventListener('click', (e)=> {
-        modalBox.classList.add('modalOpen')
-        img.lastElementChild.classList.add('modalActive')
-    }  
-    ))
-    
-    closed.addEventListener('click', (e) => {
-        modalBox.classList.remove('modalOpen')
-            for(let i = 0; i < modal.length; i++) {
-                modal[i].classList.remove('modalActive')
-        }
-    })
-
-    modalBox.addEventListener('click', (e) => {
-        if (e.target == modalBox) {
-            modalBox.classList.remove('modalOpen')
-            for(let i = 0; i < modal.length; i++) {
-                modal[i].classList.remove('modalActive')
-            }
-    }})
-}
-
-// appModal()
 
 
 // Button Scroll Top
@@ -213,20 +180,6 @@ appTopBtn()
 // Move to
 const appMoveTo = () => {
     const easeFunctions = {
-        easeInQuad: function (t, b, c, d) {
-            t /= d
-        return c * t * t + b
-    },
-    easeOutQuad: function (t, b, c, d) {
-        t /= d
-        return -c * t* (t - 2) + b
-    },
-    easeInOutQuad: function (t, b, c, d) {
-        t /= d/2
-        if (t < 1) return c/2*t*t + b
-        t--
-        return -c/2 * (t*(t-2) - 1) + b
-    },
     easeInOutCubic: function (t, b, c, d) {
         t /= d/2
         if (t < 1) return c/2*t*t*t + b
@@ -235,14 +188,14 @@ const appMoveTo = () => {
     }
     }
 
-    const triggers = document.querySelectorAll('.smoothscroll')
-
     const moveTo = new MoveTo({
         tolerance: 30,
         duration: 1200,
         easing: 'easeInOutCubic',
         container: window
     }, easeFunctions)
+    
+    const triggers = document.querySelectorAll('.smoothscroll')
 
     triggers.forEach(function(trigger) {
         moveTo.registerTrigger(trigger)
