@@ -328,7 +328,7 @@ h3 {
 }
 .scrolled .logo img {
     width: 30px;
-    height: auto;
+    height: 100%;
 }
 
 /* Navigation */
