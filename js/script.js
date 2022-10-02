@@ -32,7 +32,7 @@ const appLoader = () => {
     load()
 }
 
-// appLoader()
+appLoader()
 
 // Animation
 const appAnimation = () => {
